@@ -1,0 +1,15 @@
+/* Define tus fuentes, tamaños de letra, estilos de encabezado, etc. */
+body, html {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

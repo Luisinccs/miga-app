@@ -1,36 +1,17 @@
-<!doctype html>
-<html lang=en>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>MIGA</title>
-<link rel=stylesheet href=styles/colors.css>
-<link rel=stylesheet href=styles/style.css>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miga</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class=login-container>
-<h2>Iniciar Sesión</h2>
-<form id=login-form>
-<div class=form-group>
-<label for=username>Usuario:</label>
-<input id=username name=username required>
-</div>
-<div class=form-group>
-<label for=password>Contraseña:</label>
-<input type=password id=password name=password required>
-</div>
-<div class="field-container checkbox-field">
-<label>
-<input type=checkbox id=remember name=remember> Recordar contraseña
-</label>
-</div>
-<button type=submit>Iniciar Sesión</button>
-</form>
-<div class=links>
-<a href=#>Olvidé mi usuario/contraseña</a>
-<a href=#>¿No eres miembro? Regístrate</a>
-</div>
-</div>
-<script src=script.js></script>
+    <div class="app-container">
+        <div id="view-container">
+            </div>
+    </div>
+    <script src="/scripts/cargar-flujos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

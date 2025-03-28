@@ -1,0 +1,64 @@
+/* Define tus colores primarios, secundarios, etc. */
+/* :root {
+    --primary-color: #333;
+    --secondary-color: #007bff;
+    --accent-color: #28a745;
+    --text-color-primary: white;
+    --text-color-secondary: black;
+    --background-color-primary: #f4f4f4;
+    --background-color-secondary: white;
+    --border-color: #ccc;
+    --error-color: #dc3545;
+} */
+:root {
+    --secondary-color: #007bff;
+    --accent-color: #28a745;
+    --text-color-primary: white;
+    --text-color-secondary: black;
+    --background-color-primary: #007bff;
+    --background-color-secondary: white;
+    --background-color-nav-bar: #df8f05;
+    --border-color: #ccc;
+    --error-color: #dc3545;
+}
+
+body {
+    background-color: var(--background-color-primary);
+    color: var(--text-color-secondary);
+}
+
+.top-bar {
+    background-color: var(--background-color-nav-bar);
+    color: var(--text-color-primary);
+}
+
+.menu-button .hamburger-icon span {
+    background-color: var(--text-color-primary);
+}
+
+.login-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color-primary);
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.contract-list li {
+    background-color: var(--background-color-secondary);
+}
+
+.contract-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.form-actions button.primary {
+    background-color: var(--accent-color);
+    color: var(--text-color-primary);
+}
+
+.form-actions button.secondary {
+    background-color: var(--error-color);
+    color: var(--text-color-primary);
+}

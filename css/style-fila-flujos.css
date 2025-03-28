@@ -1,0 +1,97 @@
+
+.header-row {
+    display: grid;
+    padding: 10px 0;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-row-flujos {
+    grid-template-columns: 8em 1fr 10em 12em; /* Para dispositivos amplios */
+}
+.data-row {
+    display: grid;
+    grid-template-columns: 8em 1fr 10em 12em; /* Para dispositivos amplios */
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+
+
+.data-row > div, .header-row > div {
+    padding-right: 10px;
+}
+
+.data-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.header-row > div{
+    text-align: center;
+}
+/* Líneas de separación de columnas para dispositivos amplios */
+.header-row > div:not(:last-child),
+.data-row > div:not(:last-child) {
+    border-right: 1px solid #eee;
+}
+
+.data-row > div:nth-child(1){
+    text-align: center;
+}
+.data-row > div:nth-child(3),
+.data-row > div:nth-child(4){
+    text-align: right;
+}
+
+/* Estilos para dispositivos compactos */
+@media (max-width: 768px) {
+    .header-row {
+        display: none; /* Ocultar el encabezado en dispositivos compactos */
+    }
+
+    .data-row {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Dos columnas para la fila superior */
+        grid-template-rows: auto auto; /* Dos filas por registro */
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .data-row > div {
+        padding: 5px 0;
+    }
+
+    .data-row > div:nth-child(1) { /* Fecha */
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .data-row > div:nth-child(2) { /* Descripción */
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .data-row > div:nth-child(3) { /* Monto */
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .data-row > div:nth-child(4) { /* Saldo */
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        text-align: right; /* Alinear el saldo a la derecha */
+    }
+
+    .monto::before {
+        content: "↓ "; /* Flecha abajo por defecto */
+        color: red;
+    }
+
+    .monto.positivo::before {
+        content: "↑ ";
+        color: green;
+    }
+
+    .saldo::before {
+        content: "💼 "; /* Icono de cartera */
+    }
+}

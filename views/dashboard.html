@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/style-fila-flujos.css">
+<div class="top-bar">
+    <button class="menu-button" id="menuButton">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    <h2>Dashboard</h2>
+</div>
+<div class="view-content">
+    <div class="header-row header-row-flujos">
+        <div>Fecha</div>
+        <div>Descripción</div>
+        <div>Monto</div>
+        <div>Saldo</div>
+    </div>
+    <div id="flujos-grid"></div>
+</div>
+<!-- <script src="cargar-flujos.js"></script> -->
+<script>
+    // console.log('Script ejecutado desde dashboard.html');
+    const contenedorFlujos = document.getElementById('flujos-grid'); // Asegúrate de tener un elemento con este ID en tu HTML
+    cargarFlujosDesdeCSV(contenedorFlujos, 'data/flujos.csv'); // Reemplaza con la ruta correcta
+</script>
